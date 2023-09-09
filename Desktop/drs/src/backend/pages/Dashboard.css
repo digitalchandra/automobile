@@ -1,0 +1,9 @@
+body{
+    background-color: aliceblue;
+}
+.dashboard-logo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30%;
+}
