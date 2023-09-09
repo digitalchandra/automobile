@@ -1,0 +1,103 @@
+.slider-control img{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+.slider-overlay{
+    background-color: #31010194;
+}
+.slide-title{
+ 
+    position: relative;
+    top: 50%;
+    text-align: left;
+    left: 5%;
+}
+.slide-title h3{
+    font-family: 'Roboto', sans-serif;
+    color:aliceblue;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 45px;
+    text-shadow: 1px 1px 1px rgb(41 41 41 / 50%);
+}
+.slider-text{
+    color: aliceblue;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.hover-button{
+    margin-top: 10px;
+}
+
+
+.hover-button span  {
+    border: 1px solid #fff;
+    color: rgb(253, 253, 253);
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative; /* Required for absolute positioning */
+    overflow: hidden; /* Hide the animated background initially */
+    
+}
+
+/* Create the animation keyframes */
+@keyframes slideFromRight {
+    0% {
+        width: 0;
+        left: 100%;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+.hover-button a{
+    font-size: 20px;
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Define the hover effect with the animation */
+.hover-button span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to left, #ff00005d, hsla(6, 94%, 44%, 0.411));
+    transition: width 0.3s ease;
+   
+}
+
+.hover-button span:hover::before {
+    animation: slideFromRight 0.3s ease;
+    width: 100%;
+    left: 0;
+}
+
+
+.car-search{
+    position: relative;
+    top: 50%;
+    background-color: #0b0a0a82;
+    padding: 50px 20px;
+}
+
+.car-search h4{
+    background-color: #f90000;
+    color: #fff;
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+    padding: 10px 0px;
+}
+.car-form{
+    color: #fff;
+    font-family: 'Roboto',sans-serif;
+    text-align: left;
+}
