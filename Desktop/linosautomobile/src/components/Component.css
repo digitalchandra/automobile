@@ -14,7 +14,7 @@
     left: 5%;
 }
 .slide-title h3{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     color:aliceblue;
     text-transform: uppercase;
     font-weight: 900;
@@ -100,4 +100,209 @@
     color: #fff;
     font-family: 'Roboto',sans-serif;
     text-align: left;
+}
+
+.brand-title{
+    padding: 50px 0px;
+    text-align: left;
+}
+.brand-title h1{
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #333;
+}
+.car-brands{
+    background-color: aliceblue;
+}
+
+.card-control{
+    padding: 0px 10px;
+}
+.resent{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.resent:hover{
+    transition: all .10s ease-in-out;
+    transform : translateY(-5px);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+}
+.resent{
+    margin-top: 15px;
+}
+.resent img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+.recent-car{
+    padding:50px 0px ;
+    background-color: #f9f9f9f9;
+}
+.recently-added {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.recently-added h1{
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    color: #ffb400;
+
+}
+.recent-title{
+    padding: 10px 10px 0px;
+    text-align: left;
+  
+}
+.recent-title h5{
+    font-size: 22px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #ffb400;
+    font-weight: 600;
+}
+
+.short-feature {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 5px 10px;
+}
+.short-feature li{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.iconcolor{
+    color: #ffb400;
+    font-size: 20px;
+}
+.car-img-overlay{
+    background-color: rgb(9 44 73 / 56%);
+}
+.car-img-overlay:hover{
+    background-color: rgb(0 78 155 / 51%)
+}
+.cprice{
+    position: absolute;
+    top: 87%;
+    right: 3%;
+}
+.cprice p{
+    color: aliceblue;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.why{
+    background: url('../image/world.png') no-repeat;
+}
+.whyback{
+    background-color: #dae6e7f0;
+}
+.whyinfo{
+    padding: 75px 20px 50px 20px;
+
+}
+.whyinfo h1{
+    font-size: 40px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #ffb400;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(41 41 41 / 50%)
+}
+.whyinfo a{
+    border: 2px solid #fff;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background-color: #c29b40;
+}
+.whyinfo a:hover{
+    background-color: #ffb400;
+}
+.whycard{
+    padding: 75px 50px;
+}
+
+.whyuscard{
+    padding: 50px 15px;
+  
+    margin-top: 10px;
+    text-align: left;
+}
+.whyusicon{
+    color: #ffb400;
+    font-size: 25px;
+}
+.whymainbackgroun{
+    content: '';
+    background-color: azure;
+}
+
+.why-card-control{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    transition: width 5s;
+}
+
+.why-card-control:hover{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.number h1{
+    font-size: 150px;
+    -webkit-text-stroke: 1px #ffb400;
+    color: transparent;
+}
+.short-info{
+    padding-bottom: 7px;
+}
+.recomended{
+    padding: 50px 0px;
+    background-color: #f9f9f9f9;
+    text-align: left;
+}
+.recomended-title h1{
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    color: hsl(42, 100%, 50%);
+}
+.reco img{
+    height: 290px;
+    width: 100%;
+    object-fit: cover;
+}
+.reco-overlay{
+    background-color: #00417185;
+}
+.re-info{
+    
+
+}
+.reco-icon{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: hsl(42, 100%, 50%);
+    font-size: 22px;
+
+}
+.reco-title{
+    position: relative;
+    top: 65%;
+    color: #fff;
+    font-family: 'Barlow Condensed';
+    font-weight: 600;
 }
