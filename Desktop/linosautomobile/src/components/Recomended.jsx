@@ -3,7 +3,8 @@ import './Component.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios'
-import { Cash } from 'react-bootstrap-icons'
+import { Cash, FuelPumpDiesel, CalendarRangeFill, GearWideConnected, EvFrontFill } from 'react-bootstrap-icons'
+
 export default function Recomended() {
     const [recomended, setRecomended] = useState([])
 
@@ -40,6 +41,14 @@ export default function Recomended() {
                                                     </span>
                                                </span> 
                                                
+                                            </div>
+                                            <div className="rec-feature">
+                                                <ul>
+                                                    <li> <span className='reco-icon1' >  <FuelPumpDiesel/> </span> <span>EV </span> </li>
+                                                    <li> <span className='reco-icon1' >  <CalendarRangeFill/> </span> <span> 2020 </span>   </li>
+                                                    <li> <span className='reco-icon1' >  <GearWideConnected/> </span> <span> 2000CC </span>   </li>
+                                                    <li> <span className='reco-icon1' >  <EvFrontFill/> </span> <span>EV </span>   </li>
+                                                </ul>
                                             </div>
                                             </div>
                                         </div>

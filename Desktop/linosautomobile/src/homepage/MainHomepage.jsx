@@ -6,6 +6,7 @@ import CarBrand from '../components/CarBrand'
 import ResentPost from '../components/ResentPost'
 import Whyus from '../components/Whyus'
 import Recomended from '../components/Recomended'
+
 export default function MainHomepage() {
   return (
     <>
