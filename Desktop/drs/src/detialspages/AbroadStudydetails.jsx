@@ -15,14 +15,14 @@ export default function AbroadStudydetails() {
     const [studynav, setStudynav] = useState([])
 
     useEffect(()=>{
-        let url=(`https://drs.edu.np/wp-json/wp/v2/posts?categories=4/${id}`)
+        let url=(`https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=4/${id}`)
         axios.get(url).then((res)=>{
             setStudy(res.data)
         })
     })
 
     useEffect(()=>{
-        let url=('https://drs.edu.np/wp-json/wp/v2/posts?categories=4')
+        let url=('https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=4')
         axios.get(url).then((res)=>{
             setStudynav(res.data)
         })

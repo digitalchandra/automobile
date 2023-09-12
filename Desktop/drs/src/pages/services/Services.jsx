@@ -16,14 +16,14 @@ export default function Services() {
 
 
     useEffect(()=>{
-        let url=('https://drs.edu.np/wp-json/wp/v2/posts?categories=4')
+        let url=('https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=4')
         axios.get(url).then((res)=>{
             setServices(res.data)
         })
     })
 
     useEffect(()=>{
-        let url=('https://drs.edu.np/wp-json/wp/v2/categories?slug=abroad-study')
+        let url=('https://palpa.drs.edu.np/wp-json/wp/v2/categories?slug=abroad-study')
         axios.get(url).then((res)=>{
             setCat(res.data)
         })

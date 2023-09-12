@@ -15,7 +15,7 @@ export default function ServicesDetails() {
   const [leftnav, setLeftnav] = useState([])
 
   useEffect(()=>{
-    let url=(`https://drs.edu.np/wp-json/wp/v2/posts?categories=3/${id}`)
+    let url=(`https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=3/${id}`)
     axios.get(url).then((res)=>{
       setContent(res.data)
     })
@@ -23,7 +23,7 @@ export default function ServicesDetails() {
   },[])
 
   useEffect(()=>{
-    let url=('https://drs.edu.np/wp-json/wp/v2/posts?categories=3')
+    let url=('https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=3')
     axios.get(url).then((res)=>{
       setLeftnav(res.data)
     })

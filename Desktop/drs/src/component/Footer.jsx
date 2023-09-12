@@ -2,7 +2,8 @@ import React from 'react'
 import './Header.css'
 import logofooter from '../images/drs-white.png'
 import { Link } from 'react-router-dom'
-import {Facebook, Instagram, Tiktok, Twitter, CaretRight} from 'react-bootstrap-icons'
+
+import {Facebook, Instagram, Tiktok, Twitter, CaretRight, TelephoneFill, EnvelopeAtFill, GeoAlt } from 'react-bootstrap-icons'
 export default function Footer() {
   return (
     <>
@@ -26,13 +27,12 @@ export default function Footer() {
               </div>
               <div className="col-md-3">
                 <div className="student-services">
-                    <h4> Student Services </h4>
+                    <h4> Contact Details </h4>
                     <ul>
-                      <li> <CaretRight/> Student Resouces</li>
-                      <li> <CaretRight/> Visa Application</li>
-                      <li> <CaretRight/> Recomended University</li>
-                      <li> <CaretRight/> Destination </li>
-                      <li> <CaretRight/> Test Exam </li>
+                    <li className='footer-icon'> <span className='footer-i'> <GeoAlt/>  </span> <span className='foot-add'> Dillibazar-29 Kalika-Marg, KTM </span> </li>
+                      <li className='footer-icon'> <span className='footer-i'> <TelephoneFill/>  </span> <span className='foot-add'>  Student Resouces </span>  </li>
+                      <li className='footer-icon'> <span className='footer-i'> <EnvelopeAtFill/>  </span> <span className='foot-add'>  info@drs.org.np </span>  </li>
+ 
                      
                     </ul>
                 </div>
@@ -41,12 +41,11 @@ export default function Footer() {
                 <div className="quick-link">
                 <h4> Quick Links </h4>
                 <ul>
-                      <li> <CaretRight/> About Us</li>
-                      <li> <CaretRight/> Contact Us </li>
+                      <li> <CaretRight/> <Link to={'/about'}> About Us </Link> </li>
+                      <li> <CaretRight/>  <Link to={'/contact'}> Contact Us </Link> </li>
                     
                       <li>    <Link to="/resources">  <CaretRight/> Resouces </Link> </li>
-                      <li> <CaretRight/> Term and Conditions  </li>
-                      <li> <CaretRight/> Privacy Policies </li>
+                   
                      
                     </ul>
                 </div>

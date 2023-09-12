@@ -1,6 +1,10 @@
 .blog-content{
     padding: 50px;
 }
+.blog-conent a {
+
+    text-decoration: none;
+}
 .blog-conent h3{
     font-weight: 600;
     font-family: 'Poppins';
@@ -15,4 +19,10 @@
     font-size: 18px;
    
     margin-top: 20px;
+}
+.blog-ban img{
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+
 }

@@ -9,7 +9,7 @@ export default function Itltsads() {
   const [ielts, setIelts] = useState([])
 
   useEffect(()=>{
-    let url = ('https://drs.edu.np/wp-json/wp/v2/ielts?per_page=1')
+    let url = (`${process.env.REACT_APP_IELTSADS_API_ROOT}`)
     axios.get(url).then((res)=>{
       setIelts(res.data)
     })
@@ -29,7 +29,7 @@ export default function Itltsads() {
                       <div class="card-img-overlay img-back">
                      
                           <h2 class="card-title"> {ielts.title.rendered}  </h2>
-                          <Link to={''}> 
+                          <Link to={ielts.acf.ielts_home}> 
                               <button className='btn btn-danger'> Learn More </button> 
                           </Link>
                           

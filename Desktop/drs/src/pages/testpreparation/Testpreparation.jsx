@@ -5,7 +5,9 @@ import Footer from '../../component/Footer'
 import DesImg from '../../images/world.png'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import './Testpreparation.css'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export default function Testpreparation() {
     const [test,setTest] = useState([])
@@ -14,14 +16,14 @@ export default function Testpreparation() {
 
 
     useEffect(()=>{
-        let url=('https://drs.edu.np/wp-json/wp/v2/posts?categories=2')
+        let url=(`${process.env.REACT_APP_TESTPRE_AIP_ROOT}`)
         axios.get(url).then((res)=>{
             setTest(res.data)
         })
     },[])
 
     useEffect(()=>{
-        let url=('https://drs.edu.np/wp-json/wp/v2/categories?slug=test-preparation')
+        let url=(`${process.env.REACT_APP_TESTPREPARE_AIP_ROOT}`)
         axios.get(url).then((res)=>{
             setTestpre(res.data)
         })
@@ -31,7 +33,7 @@ export default function Testpreparation() {
     <>
     <Header/>
     <div className="testpreparation">
-    <div class="card text-white">
+    <div class="card text-white testimage">
         <img class="img-fluid" src={Testbanner} alt="Card image"/>
             <div class="card-img-overlay destination-banner">
                 <div className="aborad">
@@ -39,7 +41,7 @@ export default function Testpreparation() {
                         testpre?.map((testpre)=>{
                             return(
                                 <>
-                                 <h5 class="abroad-card-title"> {testpre.name}</h5>
+                                 <h5 key={testpre.id} class="abroad-card-title"> {testpre.name}</h5>
                                     <p class="abroad-short">
                                     {testpre.description}
                                     </p>
@@ -61,12 +63,12 @@ export default function Testpreparation() {
                         return(
                             <>
                                 <div className="col-md-3">
-                                    <div class="card text-white cat-destination ">
+                                    <div key={test.id} class="card text-white cat-destination ">
                                     <img class="card-img" src={test.fimg_url} alt={test.title.rendered}/>
 
                                         <div class="card-img-overlay destination-banner">
                                             <div className="desti-country">
-                                                <h5 class="card-title"> {test.title.rendered} </h5>
+                                                <h5 class="card-title"> <Link to={`/testpreparation/${test.id}`}>{test.title.rendered} </Link> </h5>
                                             </div>
                                     
                                         </div>

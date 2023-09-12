@@ -7,6 +7,7 @@ import {ClockHistory} from 'react-bootstrap-icons'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export default function Blog() {
 
@@ -14,7 +15,7 @@ export default function Blog() {
         const [catblog, setCatblog] = useState([])
 
         useEffect(()=>{
-            let url=('https://drs.edu.np/wp-json/wp/v2/posts?categories=6')
+            let url=('https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=6')
             axios.get(url).then((res)=>{
                 setBlog(res.data)
             
@@ -22,7 +23,7 @@ export default function Blog() {
         },[])
 
         useEffect(()=>{
-            let url=('https://drs.edu.np/wp-json/wp/v2/categories?slug=blogs')
+            let url=('https://palpa.drs.edu.np/wp-json/wp/v2/categories?slug=blogs')
             axios.get(url).then((res)=>{
                 setCatblog(res.data)
             })
@@ -33,7 +34,7 @@ export default function Blog() {
     <Header/>
 
         <div className="blog-banner">
-            <div class="card text-white">
+            <div class="card text-white blog-ban">
             <img class="img-fluid" src={Testbanner} alt="Card image"/>
                 <div class="card-img-overlay destination-banner">
                     <div className="aborad">
@@ -43,6 +44,10 @@ export default function Blog() {
                                     <>
                                      <h5 class="abroad-card-title"> {catblog.name} </h5>
                                      <p class="abroad-short">{catblog.description}</p>
+                                 
+                                    
+
+                                   
                                     </>
                                 )
                             })
@@ -60,16 +65,16 @@ export default function Blog() {
                     blog?.map((blog)=>{
                         return(
                             <>
-                                <div className="blog-content">
+                                <div key={blog.id} className="blog-content">
                                     <div className="blog-img">
                                         <img src={blog.fimg_url} alt={blog.title.rendered} className='img-fluid' />
                                     </div>
                                     <div className="blog-conent">
                                     
-                                        <h3> {blog.title.rendered} </h3>
+                                        <Link to={`/blogs/${blog.id}`}> <h3> {blog.title.rendered} </h3></Link>
                                         <span> <ClockHistory/> Latest Update: {blog.modified}</span>
-                                        <p>
-                                                {blog.excerpt.rendered}
+                                        <p dangerouslySetInnerHTML={{__html: blog.excerpt.rendered}}>
+                                              
                                         </p>
                                     </div>
                                 </div>

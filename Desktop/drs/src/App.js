@@ -38,7 +38,11 @@ import Blog from './pages/blgo/Blog';
 import ServicesDetails from './detialspages/ServicesDetails.jsx'
 import AbroadStudydetails from './detialspages/AbroadStudydetails';
 import Gallery from './pages/gallery/Gallery';
+import { useEffect } from 'react';
 function App() {
+  useEffect(()=>{
+      document.title ="Home | Drs Education Consultency"
+  },[])
   return (
     <>
           <Routes>

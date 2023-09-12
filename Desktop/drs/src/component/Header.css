@@ -87,3 +87,15 @@ header nav{
     font-weight: 600;
     cursor: pointer;
 }
+.footer-i{
+    background-color: #26c0d6;
+    padding: 7px;
+    border-radius: 3px;
+   
+}
+.student-services ul{
+padding: 0px;
+}
+.footer-icon{
+    margin-top: 15px;
+}

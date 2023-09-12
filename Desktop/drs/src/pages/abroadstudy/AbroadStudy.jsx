@@ -9,10 +9,13 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 export default function AbroadStudy() {
+    useEffect(()=>{
+        document.title ="Abroad Study | Drs Education Consultency"
+    },[])
     const [abroad, setAbroad] = useState([])
 
     useEffect(()=>{
-        let url= ('https://drs.edu.np/wp-json/wp/v2/posts?categories=3')
+        let url= ('https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=3')
         axios.get(url).then((res)=>{
             setAbroad(res.data)
         })

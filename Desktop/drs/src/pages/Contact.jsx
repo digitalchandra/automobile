@@ -12,7 +12,7 @@ export default function Contact() {
   const [contact, setContact] = useState()
 
   useEffect(()=>{
-    let url = ('https://drs.edu.np/wp-json/wp/v2/pages?slug=contact-us')
+    let url = (`${process.env.REACT_APP_CONTACT_API_ROOT}`)
     axios.get(url).then((res)=>{
       setContact(res.data)
     })
@@ -32,7 +32,9 @@ export default function Contact() {
         <div class="card-img-overlay destination-banner">
           <div className="contact-title">
           <h5 class="contact-1">{contact.title.rendered}</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"  >
+
+          </p>
           
           </div>
          
@@ -45,7 +47,9 @@ export default function Contact() {
       
                 <div className="col-md-8">
                    <div className="contact-content">
-                   <p>{contact.content.rendered} </p>
+                   <p dangerouslySetInnerHTML={{__html: contact.content.rendered}}> 
+                   
+                   </p>
                    </div>
                    
                 </div>

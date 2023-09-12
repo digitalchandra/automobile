@@ -12,7 +12,7 @@ export default function Gallery() {
 const [slider, setSlider] = useState([])
 
 useEffect(()=>{
-  let url=('https://drs.edu.np/wp-json/wl/v1/gallery')
+  let url=(`${process.env.REACT_APP_GALLERY_API_ROOT}`)
   axios.get(url).then((res)=>{
     setSlider(res.data)
   })
@@ -66,9 +66,14 @@ useEffect(()=>{
             slider?.map((slider)=>{
               return(
                 <>
-                <div className="div gallery-slider">
+                <div key={slider.id} className="div gallery-slider">
                       <img src={slider.featured_image.thumbnail} alt={slider.title} className='img-fluid' />
-              </div>
+                 
+                     <div className="gallery-title">
+                     <h4> {slider.title}</h4>
+                     </div>
+                 
+                 </div>
                 </>
               )
             })

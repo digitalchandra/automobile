@@ -10,7 +10,7 @@ export default function Clint() {
     const [review, setReview] = useState([])
 
     useEffect(()=>{
-        let url=('https://drs.edu.np/wp-json/wp/v2/posts?categories=7')
+        let url=('https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=7')
         axios.get(url).then((res)=>{
             setReview(res.data)
         })
@@ -20,7 +20,7 @@ export default function Clint() {
   return (
     <>
     <div className="container">
-        <div className='clint-title'> What Our Clint Says</div>
+        <div className='clint-title'> What Our Client Says</div>
         <div className="clint-review">
             <div className="row">
                 {
@@ -29,18 +29,21 @@ export default function Clint() {
                             <>
                               <div className="col-md-4">
                                     <div className='review-box'> 
-                                    <div className="clint-name">
+                                    <div key={review.id} className="clint-name">
                                         <div className="profile">
                                             <img className='img-fluid' src={review.fimg_url} alt={review.title.rendered}  />
                                         </div>
                                         <div className="clint-name">
-                                            <span className='name-clint'> {review.title.rendered} </span>
+                                            <span className='name-clint'  > 
+                                            {review.title.rendered}
+                                            
+                                            </span>
                                         </div>
                                     
                                     </div>
                                     <div className="clint-says">
-                                      
-                                           {review.excerpt.rendered}
+                                      <p dangerouslySetInnerHTML={{__html: review.excerpt.rendered}}></p>
+                                           
                                       
                                         <div className='review'>
                                             <StarFill/>

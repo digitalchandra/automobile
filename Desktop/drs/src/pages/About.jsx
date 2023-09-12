@@ -10,7 +10,7 @@ export default function About() {
   const [aboutus, setAbout] = useState([])
 
   useEffect(()=>{
-    let url=(`https://drs.edu.np/wp-json/wp/v2/aboutus`)
+    let url=('https://palpa.drs.edu.np/wp-json/wp/v2/aboutus/104')
     axios.get(url).then((res)=>{
         setAbout(res.data)
     })

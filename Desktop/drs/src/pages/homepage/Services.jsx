@@ -3,12 +3,12 @@ import './Category.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios'
-
+import { Link } from 'react-router-dom'
 export default function Services() {
     const [service, setSevice] = useState([])
 
     useEffect(()=>{
-        let url=('https://drs.edu.np/wp-json/wp/v2/posts?categories=4')
+        let url=(`${process.env.REACT_APP_SERVICES_API_ROOT}`)
         axios.get(url).then((res)=>{
             setSevice(res.data)
         })
@@ -26,12 +26,12 @@ export default function Services() {
                     return(
                         <>
                             <div className="col-md-4">
-                                <div class="card text-white service-card">
-                                    <img src={service.fimg_url} alt="" className="img-fluid"/>
+                                <div key={service.id} class="card text-white service-card">
+                                    <img src={service.fimg_url} alt={service.title.rendered} className="img-fluid"/>
                                     <div class="card-img-overlay img-back">
                                     
                                         <div class="services-card-title"> 
-                                            <h4> {service.title.rendered} </h4>
+                                            <Link to={`/services/${service.id}`}> {service.title.rendered} </Link>
                                         </div>
                                     
                                     </div>

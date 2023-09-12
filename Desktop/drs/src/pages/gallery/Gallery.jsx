@@ -11,7 +11,7 @@ export default function Gallery() {
     const[image, setImage] = useState([])
 
     useEffect(()=>{
-        let url=('https://drs.edu.np/wp-json/wl/v1/gallery')
+        let url=('https://palpa.drs.edu.np/wp-json/wl/v1/gallery')
         axios.get(url).then((res)=>{
             setImage(res.data)
         })

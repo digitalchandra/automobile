@@ -13,7 +13,7 @@ export default function Resources() {
  
 
     useEffect(()=>{
-        let url=('https://drs.edu.np/wp-json/wl/v1/resources');
+        let url=('https://palpa.drs.edu.np/wp-json/wl/v1/resources');
         axios.get(url).then((res)=>{
             setResource(res.data)
         })
