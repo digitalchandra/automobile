@@ -15,7 +15,7 @@ export default function Blog() {
         const [catblog, setCatblog] = useState([])
 
         useEffect(()=>{
-            let url=('https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=6')
+            let url=(`${process.env.REACT_APP_CATBLOG_API_ROOT}`)
             axios.get(url).then((res)=>{
                 setBlog(res.data)
             
@@ -23,11 +23,11 @@ export default function Blog() {
         },[])
 
         useEffect(()=>{
-            let url=('https://palpa.drs.edu.np/wp-json/wp/v2/categories?slug=blogs')
+            let url=(`${process.env.REACT_APP_BLOGCAT_API_ROOT}`)
             axios.get(url).then((res)=>{
                 setCatblog(res.data)
             })
-        })
+        },[])
   return (
 
     <>
@@ -44,10 +44,6 @@ export default function Blog() {
                                     <>
                                      <h5 class="abroad-card-title"> {catblog.name} </h5>
                                      <p class="abroad-short">{catblog.description}</p>
-                                 
-                                    
-
-                                   
                                     </>
                                 )
                             })
@@ -71,7 +67,7 @@ export default function Blog() {
                                     </div>
                                     <div className="blog-conent">
                                     
-                                        <Link to={`/blogs/${blog.id}`}> <h3> {blog.title.rendered} </h3></Link>
+                                        <Link to={`/blog/${blog.id}`}> <h3> {blog.title.rendered} </h3></Link>
                                         <span> <ClockHistory/> Latest Update: {blog.modified}</span>
                                         <p dangerouslySetInnerHTML={{__html: blog.excerpt.rendered}}>
                                               

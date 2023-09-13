@@ -13,15 +13,8 @@ export default function Footer() {
               <div className="col-md-3">
                   <img src={logofooter} alt="" className='img-fluid' />
               <div className="footer-contact">
-                 <p> 
-                  <span> Dillibazar-29 Kalika-Marg </span>
-                  <br />
-                  <span> Phone: +977989799909897786 </span>
-                  <br />
-                  <span> Email: info@drs.org.np</span>
                  
-                 </p>
-                
+               
               </div>
         
               </div>
@@ -30,7 +23,7 @@ export default function Footer() {
                     <h4> Contact Details </h4>
                     <ul>
                     <li className='footer-icon'> <span className='footer-i'> <GeoAlt/>  </span> <span className='foot-add'> Dillibazar-29 Kalika-Marg, KTM </span> </li>
-                      <li className='footer-icon'> <span className='footer-i'> <TelephoneFill/>  </span> <span className='foot-add'>  Student Resouces </span>  </li>
+                      <li className='footer-icon'> <span className='footer-i'> <TelephoneFill/>  </span> <span className='foot-add'>   </span>  </li>
                       <li className='footer-icon'> <span className='footer-i'> <EnvelopeAtFill/>  </span> <span className='foot-add'>  info@drs.org.np </span>  </li>
  
                      

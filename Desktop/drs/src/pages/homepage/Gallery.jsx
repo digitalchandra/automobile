@@ -16,7 +16,7 @@ useEffect(()=>{
   axios.get(url).then((res)=>{
     setSlider(res.data)
   })
-})
+},[])
 
   var settings = {
     dots: true,

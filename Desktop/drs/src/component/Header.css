@@ -99,3 +99,14 @@ padding: 0px;
 .footer-icon{
     margin-top: 15px;
 }
+.what{
+    background-color: #00c226;
+    padding: 7px 50px;
+    border-radius: 3px;
+    color: aliceblue;
+    font-size: 30px;
+}
+.whatsapp{
+    text-align: center;
+    padding: 20px 0px;
+}

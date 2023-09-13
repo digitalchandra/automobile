@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import Cbanner from '../images/2.jpg'
 import axios from 'axios'
 import '../pages/homepage/Category.css'
-
+import ComtactForm from '../component/ComtactForm'
 export default function Contact() {
 
   const [contact, setContact] = useState()
@@ -54,8 +54,7 @@ export default function Contact() {
                    
                 </div>
                 <div className="col-md-4">
-                {contact.featured_media}
-                  <img src="" alt="" />
+                    <ComtactForm/>
                 </div>
          
      

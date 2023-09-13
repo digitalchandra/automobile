@@ -20,7 +20,7 @@ export default function Destination() {
       <div className="destination-1">
         
         <div className="container">
-          <span className='destionation-t'> DESTINITION </span>
+          <span className='destionation-t'> ABROAD STUDY </span>
           <div className="row">
             {
                 destination?.map((destination)=>{
@@ -32,7 +32,7 @@ export default function Destination() {
                           <img src={destination.fimg_url} key={destination.id} alt={destination.title.rendered} />
                             <div className="card-img-overlay img-back destination-banner ">
                             <div className="des-title">
-                            <Link to={`/category/${destination.id}`} > <h4 class="card-title"> {destination.title.rendered}  </h4> </Link>
+                            <Link to={`/abroadstudy/${destination.id}`} > <h4 class="card-title"> {destination.title.rendered}  </h4> </Link>
                             </div>
                           </div>
                         </div>

@@ -100,9 +100,11 @@ padding: 100px 100px;
 }
 .destionation-t{
     border-bottom: 3px solid;
-    font-size: 25px;
     font-weight: 600;
     font-family: 'Poppins';
+    color: aliceblue;
+    font-size: 35px;
+    text-transform: uppercase;
 }
 .destination-back{
     background-color: #3d57a1b0;
@@ -166,9 +168,12 @@ padding: 100px 100px;
     text-transform: uppercase;
 }
 .services-title h3{
+  
     font-weight: 600;
     font-family: 'Poppins';
-    color: #455fa9;
+    color: #163f45;
+    font-size: 35px;
+    text-transform: uppercase;
 }
 
 .destination-banner{

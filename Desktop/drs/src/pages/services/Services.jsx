@@ -16,14 +16,14 @@ export default function Services() {
 
 
     useEffect(()=>{
-        let url=('https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=4')
+        let url=(`${process.env.REACT_APP_SERVICESCAT_API_ROOT}`)
         axios.get(url).then((res)=>{
             setServices(res.data)
         })
     })
 
     useEffect(()=>{
-        let url=('https://palpa.drs.edu.np/wp-json/wp/v2/categories?slug=abroad-study')
+        let url=(`${process.env.REACT_APP_SERVICESCATO_API_ROOT}`)
         axios.get(url).then((res)=>{
             setCat(res.data)
         })
@@ -34,7 +34,7 @@ export default function Services() {
     <Header/>
     <div className="banner">
         
-        <div class="card text-white">
+        <div class="card text-white services-ban">
         <img class="img-fluid" src={BannerServices} alt="Card image"/>
             <div class="card-img-overlay destination-banner">
                 <div className="aborad">

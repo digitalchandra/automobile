@@ -13,7 +13,7 @@ export default function Itltsads() {
     axios.get(url).then((res)=>{
       setIelts(res.data)
     })
-  })
+  },[])
 
   return (
     <>

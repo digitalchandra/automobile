@@ -12,7 +12,8 @@ export default function Header() {
       <nav className='navbar navbar-expand-lg'>
         <div className="container-fluid">
           <div className="logo">
-              <img src={logo} alt="" className='container-fluid' />
+            <Link to={'/'}> <img src={logo} alt="DRS Education Consultency Logo" className='container-fluid' /> </Link>
+              
           </div>
           
      

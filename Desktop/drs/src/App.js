@@ -38,7 +38,10 @@ import Blog from './pages/blgo/Blog';
 import ServicesDetails from './detialspages/ServicesDetails.jsx'
 import AbroadStudydetails from './detialspages/AbroadStudydetails';
 import Gallery from './pages/gallery/Gallery';
+import TestPreparationDetails from './detialspages/TestPreparationDetails.jsx'
+import BlogDetails from './detialspages/BlogsDetails.jsx'
 import { useEffect } from 'react';
+
 function App() {
   useEffect(()=>{
       document.title ="Home | Drs Education Consultency"
@@ -79,9 +82,11 @@ function App() {
             <Route path ="/resources" element={<Resources/>}/>
             <Route path ="/testpreparation" element={<Testpreparation/>}/>
             <Route path ="/blog" element={<Blog/>}/>
-            <Route path = "/category/:id" element={<ServicesDetails/>}/>
+            <Route path = "/abroadstudy/:id" element={<ServicesDetails/>}/>
             <Route path ="/services/:id" element={<AbroadStudydetails/>}/>
             <Route path ="/gallery" element={<Gallery/>}/>
+            <Route path ="/testpreparation/:id" element={<TestPreparationDetails/>}/>
+            <Route path ="/blog/:id" element={<BlogDetails/>}/>
 
         </Routes>
     

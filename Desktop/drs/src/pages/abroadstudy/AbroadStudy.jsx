@@ -13,24 +13,40 @@ export default function AbroadStudy() {
         document.title ="Abroad Study | Drs Education Consultency"
     },[])
     const [abroad, setAbroad] = useState([])
+    const [abroadcat, setAbroadCat] = useState([])
 
     useEffect(()=>{
-        let url= ('https://palpa.drs.edu.np/wp-json/wp/v2/posts?categories=3')
+        let url= (`${process.env.REACT_APP_ABROAD_API_ROOT}`)
         axios.get(url).then((res)=>{
             setAbroad(res.data)
         })
     },[])
+    useEffect(()=>{
+        let url = (`${process.env.REACT_APP_ABROADCAT_API_ROOT}`)
+        axios.get(url).then((res)=>{
+            setAbroadCat(res.data)
+        })
+    })
   return (
     <>
     <Header/>
     <div className="banner">
         
-        <div class="card text-white">
+        <div class="card text-white abroad-cat">
         <img class="img-fluid" src={Catbanner} alt="Card image"/>
             <div class="card-img-overlay destination-banner">
                 <div className="aborad">
-                    <h5 class="abroad-card-title">Abroad Study </h5>
-                    <p class="abroad-short">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    {
+                        abroadcat?.map((abroadcat)=>{
+                            return(
+                                <>
+                                 <h5 class="abroad-card-title">{abroadcat.name}</h5>
+                                 <p class="abroad-short">{abroadcat.description}</p>
+                                </>
+                            )
+                        })
+                    }
+                   
                     
                 </div>
             </div>
@@ -52,7 +68,7 @@ export default function AbroadStudy() {
                                         <div class="card-img-overlay destination-banner">
                                             <div className="desti-country">
                                                 <p key={abroad.id}>
-                                                <Link to={`/category/${abroad.id}`} > 
+                                                <Link to={`/abroadstudy/${abroad.id}`} > 
                                                 <h5 class="card-title"> {abroad.title.rendered} </h5>
                                                 </Link>
                                                 </p>
