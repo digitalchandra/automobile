@@ -1,0 +1,48 @@
+.card{
+    border: 0px !important;
+    border-radius: 0px !important;
+}
+.banner-s img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.banner-details{
+    background-color: #0825ada8;
+}
+.banner-details h3{
+    color:aliceblue;
+    font-family: 'Poppins';
+    font-size: 35px;
+    position: relative;
+    top: 50%;
+}
+.banner-details p{
+    color:aliceblue;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    top: 52%;
+}
+.services-card img{
+    height: 218px;
+    width: 100%;
+    object-fit: cover;
+    
+}
+.services-card{
+    margin-top: 10px;
+}
+.services-cat{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.s-card-ovearlay{
+    background-color: #11227bb5;
+}
+.s-card-ovearlay h5{
+    position: relative;
+    top: 50%;
+    color: #fff;
+}
