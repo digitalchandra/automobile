@@ -3,13 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 export default function CarBrand() {
 
   const[carbarnd, setCarbrand]= useState([])
 
   useEffect (()=>{
-    let url=('https://keshab.lionsautomobiles.com.np/wp-json/wp/v2/categories')
+    let url=(`${process.env.REACT_APP_HOME_BRAND_SLIDER_API}`)
     axios.get(url).then((res)=>{
       setCarbrand(res.data)
     })
@@ -67,13 +67,19 @@ export default function CarBrand() {
              carbarnd?.map((carbarnd)=>{
                return(
                  <>
-                 <div className="card-control">
-                  <div className='car-card'>
-                      <img src={carbarnd.acf.category_icon} alt="" />
-                      <h3>{carbarnd.name}</h3>
+                  <div className="brand-card-1">
+                      <Link to={carbarnd.acf.brand_link} target='_blank'>
+                    <div className="card-control">
+                      <div className='car-card '>
+                          <img src={carbarnd.thumbnial} alt={carbarnd.title.rendered} className='img-fluid' />
+                        
+                        </div>
+                        <h4>{carbarnd.title.rendered}</h4>
                     </div>
-                 </div>
-               
+                        
+                    </Link>
+                  </div>
+                
                  </>
                )
              })

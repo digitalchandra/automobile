@@ -1,6 +1,6 @@
 body{
     background-color: #f9f9f9;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .navbar{
     font-family: 'Barlow Condensed';
@@ -14,6 +14,7 @@ body{
 }
 .slider-overlay{
     background-color: #31010194;
+    border-radius: 0px !important;
 }
 .slide-title{
  
@@ -32,13 +33,14 @@ body{
 }
 .slider-text{
     color: aliceblue;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 16px;
 }
 
 .hover-button{
     margin-top: 10px;
+    
 }
 
 
@@ -49,7 +51,7 @@ body{
     cursor: pointer;
     position: relative; /* Required for absolute positioning */
     overflow: hidden; /* Hide the animated background initially */
-    
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Create the animation keyframes */
@@ -119,7 +121,8 @@ body{
 .brand-title h1{
     text-transform: uppercase;
     font-family: 'Barlow Condensed', sans-serif;
-    color: #333;
+    color: #ffb400;
+    text-shadow: 1px 1px 1px rgba(90, 90, 90, 0.5);
 }
 .car-brands{
     background-color: aliceblue;
@@ -127,6 +130,7 @@ body{
 
 .card-control{
     padding: 0px 10px;
+    text-align: center;
 }
 .resent{
     background-color: rgb(255, 255, 255);
@@ -162,6 +166,7 @@ body{
     font-family: 'Barlow Condensed', sans-serif;
     text-transform: uppercase;
     color: #ffb400;
+    text-shadow: 1px 1px 1px rgba(90, 90, 90, 0.5);
 
 }
 .recent-title{
@@ -169,11 +174,17 @@ body{
     text-align: left;
   
 }
-.recent-title h5{
+.recent-title a{
     font-size: 22px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Popins', sans-serif;
     color: #ffb400;
     font-weight: 600;
+    text-decoration: none;
+}
+.recent-title h5{
+  font-size: 20px;
+  font-family:'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .short-feature {
@@ -181,9 +192,10 @@ body{
     justify-content: space-between;
     list-style: none;
     padding: 5px 10px;
+    
 }
 .short-feature li{
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 500;
 }
@@ -201,10 +213,11 @@ body{
     position: absolute;
     top: 87%;
     right: 3%;
+    font-family: 'Poppins', sans-serif;
 }
 .cprice p{
     color: aliceblue;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 20px;
 }
@@ -216,7 +229,7 @@ body{
 }
 .whyinfo{
     padding: 75px 20px 50px 20px;
-
+    font-family:'Poppins', sans-serif;
 }
 .whyinfo h1{
     font-size: 40px;
@@ -229,12 +242,14 @@ body{
 .whyinfo a{
     border: 2px solid #fff;
     padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #fff;
-    background-color: #c29b40;
+    background-color: #ffb300;
+    border-radius: 5px;
+    margin-left: 5px;
 }
 .whyinfo a:hover{
     background-color: #ffb400;
@@ -244,14 +259,20 @@ body{
 }
 
 .whyuscard{
-    padding: 50px 15px;
+    padding: 30px 15px;
   
     margin-top: 10px;
     text-align: left;
+    text-align: center;
 }
 .whyusicon{
     color: #ffb400;
     font-size: 25px;
+}
+.whyusicon img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
 }
 .whymainbackgroun{
     content: '';
@@ -259,8 +280,7 @@ body{
 }
 
 .why-card-control{
-    display: flex;
-    justify-content: space-between;
+   
     margin-top: 10px;
     transition: width 5s;
 }
@@ -364,6 +384,9 @@ body{
     color: aliceblue;
     font-family: 'Barlow Condensed', sans-serif;
 }
+.footer-info li a{
+    text-decoration: none;
+}
 .footer-icon{
   
     font-size: 18px;
@@ -391,6 +414,7 @@ body{
     color: aliceblue ;
     font-family: 'Barlow Condensed', sans-serif;
     margin-left: 10px;
+    font-size: 18px;
 }
 .footer-info {
     color: rgb(226, 233, 240);
@@ -410,4 +434,90 @@ body{
     margin-top: 5px;
     display: flex;
     justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+.card{
+    border-radius: 0px !important;
+    border: 0px !important;
+}
+.car-card{
+    display: flex;
+    justify-content: center;
+}
+.rec-info-text{
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    font-weight: 500;
+}
+.whatsapp{
+    display: flex;
+    justify-content: center;
+    background-color: green;
+    padding: 20px;
+}
+.whatsappicon{
+    font-size: 30px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.contact-input {
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+    border: 1px solid #ffb400;
+    border-radius: 5px;
+    font-family: 'Poppins' sans-serif !important;
+    background-color: aliceblue;
+}
+.contact-message {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ffb400;
+    border-radius: 5px;
+    font-family: 'Poppins' sans-serif !important;
+    background-color: aliceblue;
+}
+.contact-send{
+    width: 50%;
+    padding: 5px;
+    background-color: #ffb400;
+    margin-top: 20px;
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 7px;
+    border: 0px;
+}
+.contact-inquery{
+    background-color: white;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+.car-card img{
+    height: 200px;
+    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.brand-card-1 a{
+    text-decoration: none;
+    color: #ffb400;
+}
+.social-icon{
+    background-color: #594e6f;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 3px;
+    color: #ffb300;
+    margin-left: 10px;
+}
+
+
+.footer-info a{
+    text-decoration: none;
 }

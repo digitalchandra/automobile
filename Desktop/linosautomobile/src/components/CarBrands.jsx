@@ -8,11 +8,13 @@ export default function CarBrands() {
     const [categories, setCategory] = useState([])
 
     useEffect(()=>{
-        let url = ('https://keshab.lionsautomobiles.com.np/wp-json/wp/v2/categories')
+        let url = (`${process.env.REACT_APP_CAR_BRAND_API}`)
         axios.get(url).then((res)=>{
             setCategory(res.data)
+        }).catch(err=>{
+            console.log(err)
         })
-    })
+    },[])
   return (
     <>
         <div className="brands">

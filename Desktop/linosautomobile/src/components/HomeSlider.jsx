@@ -11,7 +11,7 @@ export default function HomeSlider() {
   const [slider, setSlider] = useState([])
 
   useEffect(()=>{
-    let url =('https://keshab.lionsautomobiles.com.np/wp-json/wl/v1/slider')
+    let url =(`${process.env.REACT_APP_HOME_SLIDER_API}`)
     axios.get(url).then((res)=>{
       setSlider(res.data)
 
@@ -22,7 +22,7 @@ export default function HomeSlider() {
     var settings = {
       dots: true,
       infinite: true,
-      // autoplay: true,
+      autoplay: true,
       speed: 300,
       slidesToShow: 1,
       arrows: true,
@@ -43,7 +43,7 @@ export default function HomeSlider() {
                       <div className="col-md-9">
                       <div className="slide-title">
                     <h3>{slider.title}</h3>
-                    <span className='slider-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, laborum ut! Laudantium ea dicta nam eveniet nesciunt nisi placeat?</span>
+                   
                    <br/>
                     <div className="hover-button">
                           <span> 

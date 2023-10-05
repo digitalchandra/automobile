@@ -6,7 +6,7 @@
 }
 .top-banner{
     padding: 50px 0px;
-    background-color: hsl(42deg 100% 50% / 41%);
+    background-color: #0b0e6cb5
 }
 .search-banner-title{
     font-family: 'Barlow Condensed';
@@ -71,7 +71,11 @@
 .search-details p{
     font-weight: 500;
     font-size: 18px;
-    color: #333;
+    color: #3a3d43;
+    font-family: 'Poppins', sans-serif;
+}
+.search-details a{
+    text-decoration: none;
 }
 .shear-info ul{
     display: flex;
@@ -85,8 +89,8 @@
    
 }
 .search-info-text{
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
     color: #333;
     font-weight: 500;
 
@@ -99,4 +103,25 @@
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 600;
+}
+.brandhome{
+    background-color: aliceblue;
+}
+.brandhome:hover{
+    background-color: antiquewhite;
+}
+.homedropdown{
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.homedropdown ul li{
+    font-size: 16px;
+    font-weight: 600;
+}
+.search-price-icon{
+    font-size: 22px;
+    color: #00a900;
+}
+.cars-all-brands{
+    margin-top: 15px;
 }

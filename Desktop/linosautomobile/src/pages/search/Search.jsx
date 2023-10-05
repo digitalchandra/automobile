@@ -1,24 +1,28 @@
 import React from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import Car from '../../image/car.jpg'
 import './Search.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import CarBrands from '../../components/CarBrands'
 
-import {CpuFill, CalendarDate, FuelPump, Motherboard, GearWideConnected} from 'react-bootstrap-icons'
+import { Link } from 'react-router-dom'
+import SearchByBrand from '../../search/SearchByBrand'
+import TestBrand from '../brand/TestBrand'
+import {CpuFill, CalendarDate, CashStack, 
+  FuelPump, Motherboard, CarFrontFill, PatchCheckFill} from 'react-bootstrap-icons'
 import axios from 'axios'
 export default function Search() {
 
   const[allcar, setAllcar] = useState([])
 
   useEffect(()=>{
-    let url = ('https://keshab.lionsautomobiles.com.np/wp-json/wp/v2/posts')
+    let url = (`${process.env.REACT_APP_SEARCHPOST_API}`)
     axios.get(url).then((res)=>{
       setAllcar(res.data)
+    }).catch(err=>{
+      console.log(err)
     })
-  })
+  },[])
   return (
     <>
     <Header/>
@@ -27,7 +31,7 @@ export default function Search() {
       
          <div className="top-banner">
             <div className="container">
-            <span className='search-banner-title'> This is The Banner </span>
+            <span className='search-banner-title'> All Cars </span>
             </div>
          </div>
     </div>
@@ -40,24 +44,23 @@ export default function Search() {
               <h3> Search Cars</h3>
               <form>
                    <div class="mb-3">
-                      
-                      <label for="exampleInputEmail1" class="form-label"> Search By Brand</label>
-                      <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder='Brand'/>
+                    
+                   <SearchByBrand/>
 
                   </div>
                   <div class="mb-3">
-                      
-                      <label for="exampleInputEmail1" class="form-label"> Search By Brand</label>
-                      <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder='Brand'/>
+                     
 
                   </div> 
                 
                 
               </form>
               </div>
-          <CarBrands/>
+          
             </div>
-            
+          <div className="cars-all-brands">
+          <TestBrand/>
+          </div>
         </div>
         <div className="col-md-9">
           {
@@ -74,15 +77,19 @@ export default function Search() {
                 </div>
                 <div className="col-md-7">
                   <div className="search-details">
-                    <h3> {allcar.title.rendered} </h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                   <Link to={`/search/${allcar.slug}`}>  <h3> {allcar.title.rendered} </h3> </Link>
+                    <p> <span className='search-price-icon'> <CashStack/> </span> <span className='search-price'> Rs: {allcar.acf.car_price} </span>  </p>
+                   
                   </div>
                   <div className="shear-info">
                     <ul>
-                      <li> <span className='search-info-icon'> <CpuFill/> </span> <span className='search-info-text'> Car Types </span> </li>
-                      <li> <span className='search-info-icon'> <CalendarDate/> </span> <span className='search-info-text'> Car Types </span> </li>
-                      <li> <span className='search-info-icon'> <FuelPump/> </span> <span className='search-info-text'> Car Types </span> </li>
-                      <li> <span className='search-info-icon'> <Motherboard/> </span> <span className='search-info-text'> Car Types </span> </li>
+                      <li> <span className='search-info-icon'> <CpuFill/> </span> 
+                      <span className='search-info-text'> Engine: {allcar.acf.engine} </span> </li>
+                      <li> <span className='search-info-icon'> <CalendarDate/> </span> 
+                      <span className='search-info-text'> Model: {allcar.acf.car_modle} </span> </li>
+                      <li> <span className='search-info-icon'> <FuelPump/> </span> 
+                      <span className='search-info-text'>Fuel: {allcar.acf.fuel_type} </span> </li>
+                    
                     </ul>
                     
                     
@@ -90,10 +97,13 @@ export default function Search() {
                   </div>
                   <div className="shear-info">
                     <ul>
-                      <li> <span className='search-info-icon'> <CpuFill/> </span> <span className='search-info-text'> Car Types </span> </li>
-                      <li> <span className='search-info-icon'> <CalendarDate/> </span> <span className='search-info-text'> Car Types </span> </li>
-                      <li> <span className='search-info-icon'> <FuelPump/> </span> <span className='search-info-text'> Car Types </span> </li>
-                      <li> <span className='search-info-icon'> <Motherboard/> </span> <span className='search-info-text'> Car Types </span> </li>
+                      <li> <span className='search-info-icon'> <CarFrontFill/> </span> 
+                      <span className='search-info-text'>Car Type: {allcar.acf.body_style} </span> </li>
+                      <li> <span className='search-info-icon'> <PatchCheckFill/> 
+                      </span> <span className='search-info-text'>Warranty {allcar.acf.waeeanty} </span> </li>
+                      <li> <span className='search-info-icon'> <Motherboard/> </span> 
+                      <span className='search-info-text'> Condition: {allcar.acf.condition} </span> </li>
+  
                     </ul>
                     
                     

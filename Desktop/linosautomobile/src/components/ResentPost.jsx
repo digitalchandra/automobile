@@ -3,15 +3,17 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { FuelPump,CalendarDate, CpuFill, CarFront } from 'react-bootstrap-icons'
-
+import { Link } from 'react-router-dom'
 import './Component.css'
 export default function ResentPost() {
     const [resentpost, setRecentpost] = useState([]);
 
     useEffect(()=>{
-        let url=('https://keshab.lionsautomobiles.com.np/wp-json/wp/v2/posts');
+        let url=(`${process.env.REACT_APP_RECENT_API}`);
         axios.get(url).then((res)=>{
             setRecentpost(res.data)
+        }).catch(err=>{
+            console.log(err)
         })
     },[])
   return (
@@ -33,25 +35,28 @@ export default function ResentPost() {
                                             <div className="card">
                                             <img src={resentpost.fimg_url} alt={resentpost.title.rendered} className='img-fluid' /> 
                                             <div className="card-img-overlay car-img-overlay">
-                                                      Hello Test of the 
+                                                     
                                            
                                             </div>
                                             
                                                 <div className="cprice">
-                                                   <p>  NPR: 20000000</p>
+                                                   <p>  NPR: {resentpost.acf.car_price}</p>
                                                 </div>
                                             </div>
                                       
                                             
                                             <div className="recent-title">
-                                            <h5> {resentpost.title.rendered}</h5>
+                                                <Link to={`/search/${resentpost.slug}`}target='_parent'>
+                                                <h5> {resentpost.title.rendered}</h5>
+                                                </Link>
+                                           
                                             </div>
                                             <div className="short-info">
                                                 <ul className='short-feature'>
-                                                    <li> <span className='iconcolor'><FuelPump/> </span>  Milage </li>
-                                                    <li> <span className='iconcolor'> <CalendarDate/> </span>Milage </li>
-                                                    <li> <span className='iconcolor'> <CpuFill/></span>  Milage </li>
-                                                    <li> <span className='iconcolor'> <CarFront/></span>  Milage </li>
+                                                    <li> <span className='iconcolor'><FuelPump/> </span>  {resentpost.acf.fuel_type} </li>
+                                                    <li> <span className='iconcolor'> <CalendarDate/> </span>{resentpost.acf.car_model} </li>
+                                                    <li> <span className='iconcolor'> <CpuFill/></span>  {resentpost.acf.engine} </li>
+                                                    <li> <span className='iconcolor'> <CarFront/></span>  {resentpost.acf.car_brand} </li>
                                                 </ul>
                                             </div>
                                         </div>
