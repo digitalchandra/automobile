@@ -6,39 +6,65 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 export default function HomeDestination() {
-    const [destination, setDestination] = useState();
+    const[hservices, setHservices]= useState([])
+
+    const [services, setDestination] = useState([]);
 
     useEffect(()=>{
-        let url =('https://ptccollection.com/wp-json/wp/v2/posts');
+        let url= (`${process.env.REACT_APP_SERVICES_JAPAN_API}`)
+        axios.get(url).then((res)=>{
+            setHservices(res.data)
+        }).catch(err=>{
+            console.log('Error',err)
+        })
+    },[])
+    useEffect(()=>{
+        let url =(`${process.env.REACT_APP_SERVICES_HOME_API}`);
         axios.get(url).then((res)=>{
             setDestination(res.data)
         })
-    })
+    },[])
 
   return (
     <>
     <div className="destination">
         <div className="container">
             <div className="destination-home">
-                <span className='destination-title'> Services </span>
-                <p>Explore the best study destinations in the world! Learn all about the countries' 
-                    top universities, scholarships, cost of living, post-study work rights and mor</p>
+                {
+                    hservices?.map((hservices)=>{
+                        return(
+                            <>
+                            <span key={hservices.id} className='destination-title'> {hservices.name} </span>
+                                <p>{hservices.description}</p>
+                            </>
+                        )
+                    })
+                }
+                
             </div>
             <div className="row">
                 {
-                    destination?.map((destination)=>{
+                    services?.map((services)=>{
                         return(
                             <>
-                            <div className="col-md-3">
-                                <div className="destination-card">
-                                    <img src={destination.fimg_url} alt="" className='img-fluid' />
-                                    <div className="des-card">
-                                        <h5>{destination.title.rendered}</h5>
-                                        <Link to={destination.link}> 
-                                        <button className='btn btn-primary'> Learn More </button>
-                                        </Link>
+                            <div className="col-md-3 hservices ">
+                                <Link to={`/posts/${services.slug}`}> 
+                                <div className="des-card-control">
+                                    <div key={services.id} className="destination-card">
+                                    
+                                        <img src={services.fimg_url} alt={services.title.rendered} className='img-fluid' />
+                                    
+                                        
                                     </div>
+                                    <div className="des-card">
+                                            <h5>{services.title.rendered}</h5>
+                                        
+                                          
+                                        
+                                    </div>
+                                   
                                 </div>
+                                </Link>
                             </div>
                             </>
                         )

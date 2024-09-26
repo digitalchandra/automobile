@@ -1,0 +1,85 @@
+.about-banner img{
+    height: 175px;
+    width: 100%;
+    object-fit: cover;
+}
+.about-overlay{
+    background-color: #163f45c9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.about-us{
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+.about-us h5{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.about-main-content{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    color: #163f45;
+    font-weight: 400;
+}
+.mission{
+    margin-top: 50px;
+    background-color: #163f4521;
+    padding: 50px 0px;
+}
+.mission-content{
+    background-color: #163f45;
+    padding: 20px;
+}
+.mission-cont{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    
+}
+.mission-content h3{
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    text-transform: uppercase;
+    border-bottom: 3px solid aliceblue;
+}
+.vision{
+    padding: 50px 0px;
+}
+.goals{
+    background-color: #d4e0e7;
+    padding: 50px 0px;
+}
+.vision-content h3{
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    color: #163f45;
+    text-transform: uppercase;
+    border-bottom: 3px solid #163f45;
+}
+.vision-con{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    color: #163f45;
+    font-weight: 400;
+}
+.goals-content h3{
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    color: #163f45;
+    text-transform: uppercase;
+    border-bottom: 3px solid #163f45;
+}
+.goals-con{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    color: #163f45;
+    font-weight: 400;
+}

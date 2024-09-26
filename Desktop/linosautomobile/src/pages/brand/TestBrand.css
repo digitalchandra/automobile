@@ -1,0 +1,21 @@
+.accordion-body ul{
+    list-style: none;
+    padding: 0;
+
+
+}
+.accordion-body ul li{
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #dfdfdf;
+
+}
+.accordion-button{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #333;
+}

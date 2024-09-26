@@ -3,15 +3,26 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import '../style/Style.css'
+import { Link } from 'react-router-dom'
 
 export default function HomeServices() {
 
-    const [services, setServices] = useState()
+    const [services, setServices] = useState([])
+    const [servicescat, setServicescat]=useState([])
 
     useEffect(()=>{
-        let url=('https://ptccollection.com/wp-json/wp/v2/posts')
+        let url = (`${process.env.REACT_APP_ABROADSTUDY_API}`)
         axios.get(url).then((res)=>{
             setServices(res.data)
+        })
+    },[])
+
+    useEffect(()=>{
+        let url=(`${process.env.REACT_APP_ABROADCAT_API}`)
+        axios.get(url).then((res)=>{
+            setServicescat(res.data)
+        }).catch(err=>{
+            console.log('Error',err.message)
         })
     },[])
 
@@ -21,8 +32,18 @@ export default function HomeServices() {
         <div className="container">
             
                 <div className="services-title">
-                    <h2> TOP DESTINATION </h2>
-                    <p>Take Advantage of Our Top-Notch Student Services from Highly Qualified Education Counselors and Visa Expert Teams</p>
+                    {
+                        servicescat?.map((servicescat)=>{
+                            return(
+                                <>
+                                <h2> {servicescat.name} </h2>
+                                <p>{servicescat.description}</p>
+                                </>
+                            )
+                        })
+                     
+                    }
+                    
                 </div>
                 <div className="row">
                 {
@@ -31,13 +52,16 @@ export default function HomeServices() {
                             <>
                         
                             <div className="col-md-3">
-                            <div class="card bg-dark-border scard-img text-white">
+                            <div key={services.id} class="card bg-dark-border scard-img text-white">
                                     <img src={services.fimg_url} alt="" className='img-fluid' />
+                            <Link to={`/posts/${services.slug}`}>
                                 <div class="card-img-overlay img-fornt">
                                     <div className="card-title-control">
-                                     <h5 class="card-title">{services.title.rendered}</h5>
+                                     <h5> {services.title.rendered}</h5>
                                     </div>
                                 </div>
+                            </Link>
+                         
                                 </div>
 
                       

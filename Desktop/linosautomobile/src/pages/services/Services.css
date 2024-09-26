@@ -1,0 +1,53 @@
+.services-card img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+.services-ov{
+    background-color: #0b0e6cb5;
+    border-radius: 0px;
+    text-align: center;
+}
+.services-ov h4{
+    color: aliceblue;
+    font-size: 25px;
+    font-family:'Poopins' sans-serif;
+    position: relative;
+    top: 40%;
+    font-weight: 600;
+}
+.all-services{
+    margin-top: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.all-services img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 4px dotted #0b0e6c;
+    border-radius: 100%;
+}
+.services-title h3{
+    color: #333;
+    margin-top: 10px;
+}
+.services-contact a{
+    text-decoration: none;
+}
+.services-icon{
+    background-color: #017d4e;
+    padding: 7px;
+    font-size: 25px;
+    color: aliceblue;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+.services-contact{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

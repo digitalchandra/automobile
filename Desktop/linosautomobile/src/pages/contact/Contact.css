@@ -1,0 +1,58 @@
+.contact-title{
+    background-color: #0b0e6cb5;
+    height: 150px;
+}
+.contact-title h3{
+    text-align: center;
+    position: relative;
+    top: 40%;
+    font-family: 'Poppins';
+    color: aliceblue;
+    font-weight: 600;
+}
+.contact-icon{
+    background-color: #594e6f;
+    padding: 7px;
+    border-radius: 3px;
+    color: #ffb300;
+   
+}
+.contact-1 ul li{
+    margin-top: 15px;
+}
+.contact-1 ul{
+    list-style: none;
+}
+.contact-main{
+    display: flex;
+}
+.contact-1{
+    width: 50%;
+    margin-top: 50PX;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+.contact-2{
+    width: 50%;
+    background-color: #ffb300;
+}
+.contact-text{
+    font-size: 20px;
+    font-family: 'Poppins';
+    color: #333;
+    margin-left: 10px;
+}
+.contact-social{
+    
+    padding: 7px;
+    border-radius: 3px;
+    font-size: 22px;
+    color: #0b0e6c;
+    position: relative;
+    top: 50%;
+}
+.contact-social ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
