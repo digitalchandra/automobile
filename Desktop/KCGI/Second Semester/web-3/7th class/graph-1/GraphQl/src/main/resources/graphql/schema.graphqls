@@ -1,0 +1,16 @@
+type Query {
+    getPosts: [Post]!
+    getGet: [Get]!
+}
+
+type Post {
+    teacher: String
+    title: String!
+    greeting: String
+}
+
+type Get {
+    name: String
+    address: String
+    message: String
+}

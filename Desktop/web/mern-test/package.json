@@ -1,0 +1,23 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Mern Ecommerce Dashboard Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalchandra/merntest.git"
+  },
+  "author": "Chandra shrestha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digitalchandra/merntest/issues"
+  },
+  "homepage": "https://github.com/digitalchandra/merntest#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
