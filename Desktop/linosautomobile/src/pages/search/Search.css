@@ -1,0 +1,127 @@
+.search-banner{
+    background: url('../../image//car.jpg');
+    background-size: fit;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.top-banner{
+    padding: 50px 0px;
+    background-color: #0b0e6cb5
+}
+.search-banner-title{
+    font-family: 'Barlow Condensed';
+    color: #fff;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.car-list{
+    margin-top: 40px;
+}
+.searchbox{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.searchbox:hover{
+    transition: all .10s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
+}
+.result{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.result:hover{
+    transition: all .10s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
+}
+.search-box-image{
+    overflow: hidden;
+}
+.search-box-image img{
+    object-fit: cover;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    transition: 0.5s ease;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.search-box-image img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+}
+.search-details h3{
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    color: #ffb400;
+    font-size: 30px;
+    font-size: 25px;
+    font-weight: 600;
+
+}
+.search-details p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #3a3d43;
+    font-family: 'Poppins', sans-serif;
+}
+.search-details a{
+    text-decoration: none;
+}
+.shear-info ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+.search-info-icon{
+    font-size: 22px;
+    color: #ffb400;
+   
+}
+.search-info-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+
+}
+.car-search-box{
+    margin-top: 40px;
+}
+.searchbox h3{
+    color: #ffb400;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+}
+.brandhome{
+    background-color: aliceblue;
+}
+.brandhome:hover{
+    background-color: antiquewhite;
+}
+.homedropdown{
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.homedropdown ul li{
+    font-size: 16px;
+    font-weight: 600;
+}
+.search-price-icon{
+    font-size: 22px;
+    color: #00a900;
+}
+.cars-all-brands{
+    margin-top: 15px;
+}

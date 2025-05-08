@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Title</title>
+</head>
+<body>
+<h1 class="font-bold m-2 text-green-700"> Hello World </h1>
+<div class="container mx-auto px-4">
+    <form
+            th:action="@{/qestions}"
+            th:object="${user}"
+            method="post"
+
+            class="bg-white mb-4 pb-8 pt-6 px-8 rounded shadow-md">
+
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base">
+                First Name
+            </label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="Frist Name"
+                    name="firstName"
+            >
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base">
+                Last Name
+            </label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="Your Answer"
+                    name="lastName"
+            >
+
+        </div>
+
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base">
+               Address
+            </label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="Your Answer"
+                    name="address"
+            >
+        </div>
+
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base">
+                How would you rate your overall experience at the museum?
+            </label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="Your Answer"
+                    name="questionOne"
+            >
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base">
+                How interesting did you find the exhibits?
+            </label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="Your Answer"
+                    name="questionTwo"
+            >
+        </div>
+
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base"> Can you name after the visit new musimum in the resent days?</label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="Your Answer"
+                    name="questionThree"
+            >
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base"> Can you name after the visit new musimum in the resent days?</label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="your Answer"
+                    name="questionFour"
+            >
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base"> Can you name after the visit new musimum in the resent days?</label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="your Answer"
+                    name="questionFive"
+            >
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base"> Can you name after the visit new musimum in the resent days?</label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="your Answer"
+                    name="questionSix"
+            >
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base"> Can you name after the visit new musimum in the resent days?</label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="your Answer"
+                    name="questionSeven"
+            >
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base"> Can you name after the visit new musimum in the resent days?</label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="your Answer"
+                    name="questionEight"
+            >
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base"> Can you name after the visit new musimum in the resent days?</label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="your Answer"
+                    name="questionNine"
+            >
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-2 text- text-blue-700 text-base"> Can you name after the visit new musimum in the resent days?</label>
+            <input
+                    class="appearange-none border focus:outline-none focus:shadow-outline leading-tight px-3 py-2 rounded shadow text-gray-700 w-full"
+                    type="text"
+                    placeholder="your Answer"
+                    name="questionTen"
+            >
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

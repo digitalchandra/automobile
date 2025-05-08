@@ -1,0 +1,112 @@
+main{
+    padding: 0px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    background-color: rgb(221, 223, 226);
+    padding: 20px;
+    position: relative;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.521);
+    z-index: 999;
+    
+}
+.nav-item a{
+    text-decoration: none;
+    color:#163f45;
+    cursor: pointer;
+    z-index: 9;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+.nav-item a:hover{
+    text-decoration: none;
+    color:rgb(0, 111, 126);
+    cursor: pointer;
+    z-index: 9;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+header a.logo{
+    font-size: 30px;
+    font-weight: 600;
+}
+header nav{
+    display: flex;
+    gap: 40px;
+}
+.footer{
+    background-color: #163f45;
+    padding: 30px 0px;
+}
+.footer-contact{
+    color: #fff;
+}
+.footer-social{
+    font-size: 25px;
+    display: flex;
+    gap: 20px;
+    color: #fff;
+}
+.student-services h4{
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+}
+.student-services ul li{
+    list-style:none;
+    color: #fff;
+}
+.quick-link h4{
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+}
+.quick-link h4{
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+}
+.quick-link ul li{
+    list-style:none;
+    color: #fff;
+}
+.logo img{
+    height: 45px;
+    width: auto;
+    object-fit: cover;
+}
+.quick-link ul li a{
+    font-family: 'Poppins';
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer-i{
+    background-color: #26c0d6;
+    padding: 7px;
+    border-radius: 3px;
+   
+}
+.student-services ul{
+padding: 0px;
+}
+.footer-icon{
+    margin-top: 15px;
+}
+.what{
+    background-color: #00c226;
+    padding: 7px 50px;
+    border-radius: 3px;
+    color: aliceblue;
+    font-size: 30px;
+}
+.whatsapp{
+    text-align: center;
+    padding: 20px 0px;
+}

@@ -4,20 +4,23 @@ import { useEffect } from 'react'
 import axios from 'axios';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import banner from '../images/website.jpg'
 import Slider from 'react-slick';
-import banner2 from '../images/banenr.jpg'
+
 
 export default function HomeSlider() {
     const [slider, setSlider] = useState()
 
     useEffect(()=>{
-        let url =('https://ptccollection.com/wp-json/wl/v1/posts?per_page=3')
+        let url =(`${process.env.REACT_APP_HOME_SLIDE_ROOT}`)
         axios.get(url).then((res)=>{
             setSlider(res.data)
-        });
+        }).catch(err=>{
+          console.log(err)
+        })
+      
     },[])
-    
+    //Error=>
+    console.log(slider)
     var settings = {
         dots: true,
         infinite: true,
@@ -34,7 +37,7 @@ export default function HomeSlider() {
         slider?.map((slider)=>{
             return(
                 <>
-                    <div className="slider">
+                    <div key={slider.id} className="slider">
                             <img src={slider.featured_image.large} alt="" className='img-fluid'/>
                           
                     </div>

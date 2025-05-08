@@ -1,0 +1,54 @@
+.blog-ban img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+
+}
+.blog-bannerover{
+    background-color: #091e83b8;
+}
+.blog-bannerover h5{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Poppins';
+    position: relative;
+    top: 50%;
+}
+.blog-bannerover p{
+    color: aliceblue;
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    position: relative;
+    top: 52%;
+}
+.blgo-card img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+.catblog{
+    text-align: left;
+}
+.catblog h5{
+    font-size: 1.4em;
+    color: #0071bc;
+    font-family: 'Poppins';
+    padding: 10px 5px;
+    text-align: left;
+}
+.blog-excert {
+    font-size: 17px;
+    text-align: left;
+    color: #101f66;
+    font-family: 'Poppins';
+}
+
+.blog-update{
+    font-size: 15px;
+    color: #182356;
+    font-weight: 500;
+}
+.catblog a{
+    text-decoration: none;
+}

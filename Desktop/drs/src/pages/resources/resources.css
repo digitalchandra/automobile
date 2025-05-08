@@ -1,0 +1,29 @@
+.resourcebox{
+    margin-top: 20px;
+    background-color: #e2e8ed;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    margin-bottom: 20px;
+}
+.resources-title{
+    position: relative;
+    top: 60%;
+}
+.resources-banner img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.resources-title h4{
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 35px;
+}
+.filetitle{
+    font-size: 20px;
+    color: #163f45;
+    font-family: 'Poppins';
+    font-weight: 400;
+}

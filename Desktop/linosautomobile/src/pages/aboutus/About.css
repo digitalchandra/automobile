@@ -1,0 +1,66 @@
+.about-banenr-control{
+    
+    text-align: center;
+    background-color: #0b0e6cb5;
+}
+.about-banenr-control h4{
+    position: relative;
+    top: 40%;
+    font-family: 'Poppins';
+    color: aliceblue;
+    font-size: 30px;
+}
+.about-bannerimg img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+.about{
+    margin-top: 50px;
+}
+.about-content{
+    font-family: 'Poopins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #020446;
+
+}
+.about-ceo {
+    display: flex;
+    justify-content: center;
+}
+.about-ceo img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 3px solid #ffb300;
+}
+.ceo-name{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.ceo-name h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.ceo{
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    
+
+}
+.ceo-icon{
+    background-color: #ffb300;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 22px;
+}
+.ceo-contact{
+    text-align: center;
+    
+}

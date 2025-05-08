@@ -1,0 +1,523 @@
+body{
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    font-family: 'Barlow Condensed';
+    font-size: 20px;
+    font-weight: 500;
+}
+.slider-control img{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+.slider-overlay{
+    background-color: #31010194;
+    border-radius: 0px !important;
+}
+.slide-title{
+ 
+    position: relative;
+    top: 50%;
+    text-align: left;
+    left: 5%;
+}
+.slide-title h3{
+    font-family: 'Barlow Condensed', sans-serif;
+    color:aliceblue;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 45px;
+    text-shadow: 1px 1px 1px rgb(41 41 41 / 50%);
+}
+.slider-text{
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.hover-button{
+    margin-top: 10px;
+    
+}
+
+
+.hover-button span  {
+    border: 1px solid #fff;
+    color: rgb(253, 253, 253);
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative; /* Required for absolute positioning */
+    overflow: hidden; /* Hide the animated background initially */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Create the animation keyframes */
+@keyframes slideFromRight {
+    0% {
+        width: 0;
+        left: 100%;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+.hover-button a{
+    font-size: 20px;
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* Define the hover effect with the animation */
+.hover-button span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to left, #ff00005d, hsla(6, 94%, 44%, 0.411));
+    transition: width 0.3s ease;
+   
+}
+
+.hover-button span:hover::before {
+    animation: slideFromRight 0.3s ease;
+    width: 100%;
+    left: 0;
+}
+
+
+.car-search{
+    position: relative;
+    top: 50%;
+    background-color: #0b0a0a82;
+    padding: 50px 20px;
+}
+
+.car-search h4{
+    background-color: #f90000;
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: center;
+    padding: 10px 0px;
+}
+.car-form{
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: left;
+}
+
+.brand-title{
+    padding: 50px 0px;
+    text-align: left;
+}
+.brand-title h1{
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #ffb400;
+    text-shadow: 1px 1px 1px rgba(90, 90, 90, 0.5);
+}
+.car-brands{
+    background-color: aliceblue;
+}
+
+.card-control{
+    padding: 0px 10px;
+    text-align: center;
+}
+.resent{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.resent:hover{
+    transition: all .10s ease-in-out;
+    transform : translateY(-5px);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+}
+.resent{
+    margin-top: 15px;
+}
+.resent img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+.recent-car{
+    padding:50px 0px ;
+    background-color: #f9f9f9f9;
+}
+.recently-added {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.recently-added h1{
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    color: #ffb400;
+    text-shadow: 1px 1px 1px rgba(90, 90, 90, 0.5);
+
+}
+.recent-title{
+    padding: 10px 10px 0px;
+    text-align: left;
+  
+}
+.recent-title a{
+    font-size: 22px;
+    font-family: 'Popins', sans-serif;
+    color: #ffb400;
+    font-weight: 600;
+    text-decoration: none;
+}
+.recent-title h5{
+  font-size: 20px;
+  font-family:'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.short-feature {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 5px 10px;
+    
+}
+.short-feature li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.iconcolor{
+    color: #ffb400;
+    font-size: 20px;
+}
+.car-img-overlay{
+    background-color: rgb(9 44 73 / 56%);
+}
+.car-img-overlay:hover{
+    background-color: rgb(0 78 155 / 51%)
+}
+.cprice{
+    position: absolute;
+    top: 87%;
+    right: 3%;
+    font-family: 'Poppins', sans-serif;
+}
+.cprice p{
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.why{
+    background: url('../image/world.png') no-repeat;
+}
+.whyback{
+    background-color: #dae6e7f0;
+}
+.whyinfo{
+    padding: 75px 20px 50px 20px;
+    font-family:'Poppins', sans-serif;
+}
+.whyinfo h1{
+    font-size: 40px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #ffb400;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(41 41 41 / 50%)
+}
+.whyinfo a{
+    border: 2px solid #fff;
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ffb300;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.whyinfo a:hover{
+    background-color: #ffb400;
+}
+.whycard{
+    padding: 75px 50px;
+}
+
+.whyuscard{
+    padding: 30px 15px;
+  
+    margin-top: 10px;
+    text-align: left;
+    text-align: center;
+}
+.whyusicon{
+    color: #ffb400;
+    font-size: 25px;
+}
+.whyusicon img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+.whymainbackgroun{
+    content: '';
+    background-color: azure;
+}
+
+.why-card-control{
+   
+    margin-top: 10px;
+    transition: width 5s;
+}
+
+.why-card-control:hover{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.number h1{
+    font-size: 150px;
+    -webkit-text-stroke: 1px #ffb400;
+    color: transparent;
+}
+.short-info{
+    padding-bottom: 7px;
+}
+.recomended{
+    padding: 50px 0px;
+    background-color: #f9f9f9f9;
+    text-align: left;
+}
+.recomended-title h1{
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    color: hsl(42, 100%, 50%);
+    text-shadow: 1px 1px 1px rgba(90, 90, 90, 0.5);
+}
+.reco img{
+    height: 290px;
+    width: 100%;
+    object-fit: cover;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.reco img:hover{
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    overflow: hidden;
+}
+
+.reco-overlay:hover{
+    background-color: #00417185;
+    transition: .30s;
+    transition-timing-function: ease-in-out;
+}
+
+.reco{
+    margin-top: 10px;
+    transition: 0.3s;
+
+}
+.reco:hover{
+    transform: translate(0, -10px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.137);
+}
+.reco-icon{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: hsl(42, 100%, 50%);
+    font-size: 22px;
+
+}
+.reco-title{
+    position: relative;
+    top: 65%;
+    color: #fff;
+    font-family: 'Barlow Condensed';
+    font-weight: 600;
+}
+.reco-price{
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 7px;
+}
+.reco-icon1{
+    color: hsl(42, 100%, 50%);
+    font-size: 18px;
+    
+}
+.rec-feature{
+    position: relative;
+    top: 65%;
+
+}
+.rec-feature ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+.footer{
+    background-color: #0b0e6c;
+    padding: 50px 0px;
+}
+
+.footer-info h4{
+    color: aliceblue;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.footer-info li a{
+    text-decoration: none;
+}
+.footer-icon{
+  
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+.footer-info ul{
+    list-style: none;
+    padding: 0;
+}
+.f-icon{
+    padding: 10px;
+    background-color: #ffd67652;
+    border-radius: 3px;
+    color: hsl(42, 100%, 50%);
+}
+.f-icon:hover{
+    padding: 10px;
+    background-color: hsl(42, 100%, 50%);
+    border-radius: 7px;
+    color: aliceblue;
+}
+.info-footer{
+    color: aliceblue ;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-left: 10px;
+    font-size: 18px;
+}
+.footer-info {
+    color: rgb(226, 233, 240);
+    text-align: left;
+}
+
+.brands{
+    background-color: #fff;
+    padding: 1px 10px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.brands-name{
+    background-color: aliceblue;
+    padding: 1px 3px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+.card{
+    border-radius: 0px !important;
+    border: 0px !important;
+}
+.car-card{
+    display: flex;
+    justify-content: center;
+}
+.rec-info-text{
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    font-weight: 500;
+}
+.whatsapp{
+    display: flex;
+    justify-content: center;
+    background-color: green;
+    padding: 20px;
+}
+.whatsappicon{
+    font-size: 30px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.contact-input {
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+    border: 1px solid #ffb400;
+    border-radius: 5px;
+    font-family: 'Poppins' sans-serif !important;
+    background-color: aliceblue;
+}
+.contact-message {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ffb400;
+    border-radius: 5px;
+    font-family: 'Poppins' sans-serif !important;
+    background-color: aliceblue;
+}
+.contact-send{
+    width: 50%;
+    padding: 5px;
+    background-color: #ffb400;
+    margin-top: 20px;
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 7px;
+    border: 0px;
+}
+.contact-inquery{
+    background-color: white;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+.car-card img{
+    height: 200px;
+    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.brand-card-1 a{
+    text-decoration: none;
+    color: #ffb400;
+}
+.social-icon{
+    background-color: #594e6f;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 3px;
+    color: #ffb300;
+    margin-left: 10px;
+}
+
+
+.footer-info a{
+    text-decoration: none;
+}
